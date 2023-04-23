@@ -64,19 +64,21 @@ locations.forEach(location => {
       locationImg.src = destinations[indexOfLocation].png;
       locationImg.addEventListener('load', () => {
         locationImg.style.animation = 'location 1s';
+        
+        locationName.innerHTML = destinations[indexOfLocation].name;
+        locationName.style.animation = 'location-name 1s';
+        stats.style.animation = 'location-name 1.9s';
+  
+        locationInfo.innerHTML = destinations[indexOfLocation].description;
+        locationInfo.style.animation = 'location-info 1.2s';
+        
+        locationDistance.innerHTML = destinations[indexOfLocation].distance;
+        locationDistance.style.animation = 'distance-stat 1.3s';
+  
+        locationTime.innerHTML = destinations[indexOfLocation].travel;
+        locationTime.style.animation = 'time-stat 1.4s';
       });
 
-      locationName.innerHTML = destinations[indexOfLocation].name;
-      locationName.style.animation = 'location-name 1s';
-      stats.style.animation = 'location-name 1.9s';
 
-      locationInfo.innerHTML = destinations[indexOfLocation].description;
-      locationInfo.style.animation = 'location-info 1.2s';
-      
-      locationDistance.innerHTML = destinations[indexOfLocation].distance;
-      locationDistance.style.animation = 'distance-stat 1.3s';
-
-      locationTime.innerHTML = destinations[indexOfLocation].travel;
-      locationTime.style.animation = 'time-stat 1.4s';
     });
   }); 
