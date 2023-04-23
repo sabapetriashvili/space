@@ -52,18 +52,17 @@ indicators.forEach(indicator => {
       memberImg.src = crewMembers[indexOfIndicator].png;
       memberImg.addEventListener('load', () => {
         memberImg.style.animation = 'member 1.4s';
+
+        memberTitle.innerHTML = crewMembers[indexOfIndicator].role;
+        memberTitle.style.animation = 'member-title 1.3s';
+        
+        memberName.innerHTML = crewMembers[indexOfIndicator].name;
+        memberName.style.animation = 'member-name 1.4s';
+  
+        memberDescription.innerHTML = crewMembers[indexOfIndicator].bio;
+        memberDescription.style.animation = 'member-text 1.5s';
+  
       });
-
-
-      memberTitle.innerHTML = crewMembers[indexOfIndicator].role;
-      memberTitle.style.animation = 'member-title 1.3s';
-      
-      memberName.innerHTML = crewMembers[indexOfIndicator].name;
-      memberName.style.animation = 'member-name 1.4s';
-
-      memberDescription.innerHTML = crewMembers[indexOfIndicator].bio;
-      memberDescription.style.animation = 'member-text 1.5s';
-
 
 
 
