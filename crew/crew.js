@@ -3,7 +3,7 @@ const crewMembers = [
       "name": "Douglas Hurley",
       "png": "../starter-code/assets/crew/image-douglas-hurley.png",
       "role": "Commander",
-      "bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2."
+      "bio": "Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2. An American engineer, former Marine Corps pilot and former NASA astronaut, fair enough?"
     },
     {
       "name": "Mark Shuttleworth",
@@ -21,7 +21,7 @@ const crewMembers = [
       "name": "Anousheh Ansari",
       "png": "../starter-code/assets/crew/image-anousheh-ansari.png",
       "role": "Flight Engineer",
-      "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space."
+      "bio": "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. Iranian American engineer and co-founder of Prodea Systems."
     }
   ];
 
