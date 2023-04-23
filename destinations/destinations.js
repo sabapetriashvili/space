@@ -62,8 +62,9 @@ locations.forEach(location => {
       location.classList.add('active');
 
       locationImg.src = destinations[indexOfLocation].png;
-      locationImg.style.animation = 'location 1s';
-
+      locationImg.addEventListener('load', () => {
+        locationImg.style.animation = 'location 1s';
+      });
 
       locationName.innerHTML = destinations[indexOfLocation].name;
       locationName.style.animation = 'location-name 1s';
