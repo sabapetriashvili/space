@@ -50,14 +50,18 @@ infoIndicators.forEach(indicator => {
 
       if(window.screen.width > 1065) {
         technologyImg.style.backgroundImage = `url('${technology[indexOfIndicator].images.portrait}')`;
+        technologyImg.addEventListener('load', () => {
+          technologyImg.style.animation = 'techno-img 2s';
+        });
       } else {
         technologyImg.style.backgroundImage = `url('${technology[indexOfIndicator].images.landscape}')`;
+        technologyImg.addEventListener('load', () => {
+          technologyImg.style.animation = 'techno-img 2s';
+        });
       }
 
-      technologyImg.addEventListener('load', () => {
-        technologyImg.style.animation = 'techno-img 2s';
-      });
-      
+ 
+
       technologyName.innerHTML = technology[indexOfIndicator].name;
       technologyInfo.style.animation = 'techno 2s';
 
