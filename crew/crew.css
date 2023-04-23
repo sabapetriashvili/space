@@ -1,0 +1,262 @@
+body {
+    background-image: url('../starter-code/assets/crew/background-crew-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url('../starter-code/assets/crew/background-crew-tablet.jpg');
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background-image: url('../starter-code/assets/crew/background-crew-mobile.jpg');
+    }
+}
+
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+#crew-title {
+    color: var(--white);
+    position: relative;
+    margin: 40px 0 0 40px;
+}
+
+#crew-title::before {
+    content: '02 ';
+    color: var(--gray);
+    position: absolute;
+    left: -40px;
+}
+
+.crew {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#member-title {
+    color: var(--gray);
+    animation: member-title 1.3s;
+}
+
+#member-name {
+    margin: 15px 0 27px;
+    animation: member-name 1.4s;
+}
+
+#member-description {
+    max-width: 444px;
+    margin-bottom: 88px;
+    animation: member-text 1.5s;
+}
+
+.crew-indicators {
+    display: flex;
+}
+
+.indicator {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: var(--gray);
+    margin-right: 24px;
+    cursor: pointer;
+    transition: background-color linear 0.3s;
+}
+
+.indicator:hover {
+    background-color: rgba(255,255,255, 0.7);
+}
+
+.indicator.active {
+    background-color: var(--white);
+}
+
+.crew-member-img {
+    max-height: 620px;
+    animation: member 1.4s;
+}
+
+@keyframes member {
+    0%   {
+        margin-right: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-right: 0;
+        opacity: 1;
+    }
+  }
+
+  @keyframes member-title {
+    0%   {
+        margin-left: -30px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+  }
+
+  @keyframes member-name {
+    0%   {
+        margin-left: -40px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+  }
+
+  @keyframes member-text {
+    0%   {
+        margin-left: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-left: 0;
+        opacity: 1;
+    }
+  }
+
+
+  @media only screen and (max-width: 1240px) {
+    .main-content {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width: 1187px) {
+    .crew-member-img {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 1110px) {
+    .crew-member-img {
+        max-width: 350px;
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    .crew {
+        margin-top: 90px;
+        flex-direction: column;
+    }
+
+    .member-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #member-title, #member-name, #member-description {
+        text-align: center;
+    } 
+
+    #member-description {
+        margin-bottom: 50px;
+    }
+
+    .indicator:nth-child(4) {
+        margin-right: 0;
+    }
+
+    .crew-member-img {
+        margin-top: 70px;
+        max-width: 400px;
+    } 
+}
+
+@media only screen and (max-width: 650px) {
+    #crew-title {
+        text-align: center;
+        margin-left: 5px;
+    }
+
+    #crew-title::before {
+        left: -5px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .crew {
+        margin-top: 0;
+    }
+
+    .crew-member-img {
+        order: 1;
+        width: 250px;
+        border-bottom: 1px solid var(--gray);
+        margin-bottom: 40px;
+    } 
+
+    .member-info {
+        order: 2;
+    }
+
+    .crew-indicators {
+        order: 1;
+        margin: 32px 0 70px;
+    }
+
+    #member-title {
+        font-size: 24px;
+        order: 2;
+    }
+
+    #member-name {
+        font-size: 32px;
+        order: 3;
+    }
+
+    #member-description {
+        order: 4;
+    }
+}
+
+@media only screen and (max-width: 439px) {
+    #crew-title {
+        line-height: 35px;
+    }
+}
+
+@media only screen and (max-width: 285px) {
+    .crew-member-img {
+        width: 180px;
+    } 
+
+    #member-title {
+        font-size: 16px;
+    }
+
+    #member-name {
+        font-size: 24px;
+        order: 3;
+    }
+
+    #member-description {
+       font-size: 14px;
+       line-height: 25px;
+    }
+
+}

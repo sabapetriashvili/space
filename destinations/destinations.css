@@ -1,0 +1,307 @@
+body {
+    background-image: url('../starter-code/assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: url('../starter-code/assets/destination/background-destination-tablet.jpg');
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background-image: url('../starter-code/assets/destination/background-destination-mobile.jpg');
+    }
+}
+
+.main-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#pick-destination {
+    color: var(--white);
+    position: relative;
+    margin: 40px 0 0 6%;
+}
+
+#pick-destination::before {
+    content: '01 ';
+    color: var(--gray);
+    position: absolute;
+    left: -40px;
+}
+
+.destinations {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 90px;
+}
+
+.destination-img {
+    height: 445px;
+    width: 445px;
+    animation: location 1s;
+}
+
+.info {
+    max-width: 445px;
+}
+
+.locations {
+    display: flex;
+}
+
+.locations h4 {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    font-weight: 400;
+    color: var(--white);
+    text-transform: uppercase;
+    color: var(--primary-light);
+    padding-bottom: 12px;
+    margin-right: 35px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.locations h4:hover {
+    color: var(--gray);
+    border-bottom: 1px solid var(--gray);
+}
+
+.locations h4.active {
+    color: var(--white);
+    border-bottom: 1px solid var(--white);
+}
+
+#location-name{
+    margin: 37px 0 14px;
+    animation: location-name 1s;
+}
+
+#location-info {
+    padding-bottom: 54px;
+    border-bottom: 1px solid rgba(144, 139, 139, 0.3);
+    animation: location-info 1.2s;
+}
+
+.stats {
+    display: flex;
+    margin-top: 28px;
+}
+
+.distance-stat {
+    margin-right: 80px;
+    animation: distance-stat 1.3s; 
+}
+
+
+.time-stat {
+    animation: time-stat 1.4s;
+}
+
+.stats {
+    animation: stat 1.9s;
+}
+
+
+.stats h2.subheading {
+    color: var(--primary-light);
+    margin-bottom: 12px;
+}
+
+
+@keyframes location {
+    0%   {
+        opacity: 0;
+        transform: rotate(10deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+  }
+
+@keyframes location-name {
+    0%   {
+        padding-left: 40px;
+        opacity: 0;
+    }
+
+    100% {
+        padding-left: 0;
+        opacity: 1;
+    }
+  }
+
+  @keyframes location-info {
+    0%   {
+        padding-left: 60px;
+        opacity: 0;
+    }
+
+    100% {
+        padding-left: 0;
+        opacity: 1;
+    }
+  }
+
+  @keyframes distance-stat {
+    0%   {
+        padding-left: 20px;
+        opacity: 0;
+    }
+
+    100% {
+        padding-left: 0;
+        opacity: 1;
+    }
+  }
+
+  @keyframes time-stat {
+    0%   {
+        padding-left: 30px;
+        opacity: 0;
+    }
+
+    100% {
+        padding-left: 0;
+        opacity: 1;
+    }
+  }
+
+  @keyframes stats {
+    0%   {
+        padding-left: 1px;
+        opacity: 0;
+    }
+
+    100% {
+        padding-left: 0;
+        opacity: 1;
+    }
+  }
+
+
+
+  
+
+  @media only screen and (max-width: 1315px) {
+    .destinations {
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .main-content {
+        width: 100%;
+
+    }
+}
+
+@media only screen and (max-width: 1069px) {
+    .destinations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination-img {
+        height: 350px;
+        width: 350px;
+        margin-bottom: 53px;
+    }
+
+    .locations {
+       justify-content: space-evenly;
+    } 
+
+    .locations h4 {
+        margin-right: 0;
+    }
+
+    #location-name {
+        text-align: center;
+    }
+
+    #location-info {
+        text-align: center;
+    }
+
+    .stats {
+        justify-content: space-around;
+        margin-bottom: 50px;
+    }
+
+    .stats h1.subheading, .stats h2.subheading {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #pick-destination {
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    #pick-destination::before {
+        left: -5px;
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 439px) {
+    #pick-destination {
+        line-height: 35px;
+    }
+
+    .destinations {
+        margin-top: 50px;
+    }
+
+    .destination-img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .stats h1.subheading {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 367px) {
+    #location-name {
+        font-size: 50px;
+    }
+
+    #location-info {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 310px) {
+    .destination-img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .locations {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .locations h4 {
+        margin-bottom: 20px;
+    }
+}
+
