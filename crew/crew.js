@@ -50,7 +50,10 @@ indicators.forEach(indicator => {
       indicator.classList.add('active');
 
       memberImg.src = crewMembers[indexOfIndicator].png;
-      memberImg.style.animation = 'member 1.4s';
+      memberImg.addEventListener('load', () => {
+        memberImg.style.animation = 'member 1.4s';
+      });
+
 
       memberTitle.innerHTML = crewMembers[indexOfIndicator].role;
       memberTitle.style.animation = 'member-title 1.3s';
