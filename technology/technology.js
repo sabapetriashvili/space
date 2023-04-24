@@ -58,6 +58,7 @@ infoIndicators.forEach(indicator => {
 
       
       technologyName.innerHTML = technology[indexOfIndicator].name;
+      technologyDescription.innerHTML = technology[indexOfIndicator].description;
       technologyInfo.style.animation = 'techno 2s';
 
     })
