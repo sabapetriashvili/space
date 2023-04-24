@@ -233,6 +233,7 @@ body {
 
     #location-info {
         text-align: center;
+        height: 120px;
     }
 
     .stats {
@@ -285,6 +286,7 @@ body {
     #location-info {
         font-size: 14px;
         line-height: 20px;
+        height: 70px;
     }
 }
 
